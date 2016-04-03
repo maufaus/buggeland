@@ -5,9 +5,27 @@
     <link rel="stylesheet" href="meny.css">
     <link rel="stylesheet" href="480.css">
     <title>Buggeland</title>
+    <script>
+    /* Open the sidenav */
+function openNav() {
+    document.getElementById("mySidenav").style.left = "0";
+}
+
+       
+
+/* Close/hide the sidenav */
+function closeNav() {
+    document.getElementById("mySidenav").style.left = "-100%";
+}
+
+</script>
 </head>
 
 <body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+ <p id="aboutTxt">Hello! placeholde placeholde placeholde vplaceholde v placeholde  placeholde placeholde placeholdeplaceholde placeholde placeholde placeholdeplaceholdeplaceholde</p>		
+</div>
    <div class="top">
     <nav>
         <ul>
@@ -23,21 +41,14 @@
                 <a href='#'>forum</a>
             </li>
             <li>
-                <a href='#'>info</a>
+                <a href='#' onclick="openNav()" id="openAbout">about</a>
             </li>
             <li>
                 <a href="#">trailers</a>
             </li>
-
-            <li>
-                <a href='#'>about</a>
-            </li>
         </ul>
     </nav>
     <div class="title">MADE BY GAYMERS</div>
-   </div>
-   <div class="middle">
-       dafuq
    </div>
 </body>
 

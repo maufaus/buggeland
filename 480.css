@@ -19,13 +19,9 @@ nav ul {
     list-style: none;
     background-color: rgba(78, 78, 78, 0.75);
     margin-top: 0;
+    padding-left: 0.5%;
 }
 
-nav ul:after {
-    content: "";
-    clear: both;
-    display: block;
-}
 
 nav ul li {
     float: right;
@@ -52,7 +48,7 @@ nav ul li a:visited,
 }
 
 nav ul span {
-    font-size: 1.7em;
+    font-size: 2em;
     color: #fff;
 }
 
