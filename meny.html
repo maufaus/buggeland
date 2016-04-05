@@ -2,54 +2,69 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="meny.css">
     <link rel="stylesheet" href="480.css">
     <title>Buggeland</title>
     <script>
-    /* Open the sidenav */
-function openNav() {
-    document.getElementById("mySidenav").style.left = "0";
-}
+        //close/open about
+        function toggleAbout(aboutPage) {
+            var e = document.getElementById("aboutPage");
+            if (e.style.left == "-100%")
+                e.style.left = "0";
 
-       
+            else
+                e.style.left = "-100%";
+        }
 
-/* Close/hide the sidenav */
-function closeNav() {
-    document.getElementById("mySidenav").style.left = "-100%";
-}
 
-</script>
+        //toggle dropdown menu
+        function toggleConnect(connect) {
+            var c = document.getElementById("connect");
+            if (c.style.display == "block")
+                c.style.display = "none";
+
+            else
+                c.style.display = "block";
+        }
+    </script>
 </head>
 
 <body>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
- <p id="aboutTxt">Hello! placeholde placeholde placeholde vplaceholde v placeholde  placeholde placeholde placeholdeplaceholde placeholde placeholde placeholdeplaceholdeplaceholde</p>		
-</div>
-   <div class="top">
-    <nav>
-        <ul>
-            <span>{buggeland}</span>
-            <li>
-                <a href='#'>connect<span>></span></a>
-                <ul>
-                    <li><a href='#'>teamspeak</a></li>
-                    <li><a href='#'>discord</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href='#'>forum</a>
-            </li>
-            <li>
-                <a href='#' onclick="openNav()" id="openAbout">about</a>
-            </li>
-            <li>
-                <a href="#">trailers</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="title">MADE BY GAYMERS</div>
-   </div>
+    <div id="aboutPage" class="aboutSlide">
+        <p>Hello! This is a gaming community aiming for everyone to 420 blossa.</p>
+    </div>
+    <div class="top">
+        <nav>
+            <ul>
+                <span><a href="meny.html">{buggeland}</a></span>
+                <li>
+                    <a href="javascript:void(0)" onclick="toggleConnect()" class="connect">connect&nbsp;<i class="fa fa-caret-down"></i></a>
+                    <ul>
+                        <div id="connect">
+                            <a href='#'>teamspeak</a>
+                            <a href='#'>discord</a>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href='#'>forum</a>
+                </li>
+                <!--<li>
+                    <a href='javascript:void(0)' onclick="openNav()">about</a>
+                </li>-->
+                <li>
+                    <a href="#">trailers</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="title">MADE BY GAYMERS</div>
+        <div class="about" id="openAbout" onclick="toggleAbout()">
+            <p>About
+                <!--&nbsp;<i class="fa fa-chevron-right"></i>--></p>
+        </div>
+    </div>
+
 </body>
 
 </html>
